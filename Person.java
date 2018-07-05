@@ -1,6 +1,8 @@
 class Person {
-  // Define the hello instance method
+  // Declare the name instance field
+  public String name;
+
   public void hello() {
-      System.out.println("Hello");
-    }
+    System.out.println("Hello");
+  }
 }
