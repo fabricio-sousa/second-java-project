@@ -1,8 +1,8 @@
 class Person {
-  // Declare the name instance field
   public String name;
 
   public void hello() {
-    System.out.println("Hello");
+    // Use this to output “Hello, my name is ________.”
+    System.out.println("Hello, my name is " + this.name + ".");
   }
 }
