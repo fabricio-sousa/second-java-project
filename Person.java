@@ -1,9 +1,12 @@
 class Person {
   public String name;
 
-  // Define the constructor for the Person class
-  Person() {
+  // Allow the constructor to take a String type argument
+  Person(String name) {
     System.out.println("Created an instance of the Person class.");
+    // Set the instance field name using the value of the argument
+    this.name = name;
+    
   }
 
   public void hello() {
