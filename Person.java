@@ -1,9 +1,7 @@
 class Person {
   public static int count = 0;
   public String firstName;
-  // Declare the middleName instance field
   public String middleName;
-  
   public String lastName;
   public int age;
   public double height, weight;
@@ -17,17 +15,12 @@ class Person {
     this.weight = weight;
   }
   
-  // Define the constructor for receiving middleName
-  Person(String firstName, String middleName, String lastName, int age, double height, double weight ) {
-    Person.count++;
-    this.firstName = firstName;
+  Person(String firstName, String middleName, String lastName, int age, double height, double weight) {
+    // Call the constructor using this()
+    this(firstName, lastName, age, height, weight);
     this.middleName = middleName;
-    this.lastName = lastName;
-    this.age = age;
-    this.height = height;
-    this.weight = weight;
   }
-  
+
   public String fullName() {
     return this.firstName + " " + this.lastName;
   }
@@ -46,4 +39,5 @@ class Person {
     System.out.println("Total: " + Person.count + " people.");
   }
 }
+
 
