@@ -16,13 +16,17 @@ class Person {
   }
   
   Person(String firstName, String middleName, String lastName, int age, double height, double weight) {
-    // Call the constructor using this()
     this(firstName, lastName, age, height, weight);
     this.middleName = middleName;
   }
 
   public String fullName() {
-    return this.firstName + " " + this.lastName;
+     // Use an if statement to only print a middle name if it exists
+    if (this.middleName == null) {
+      return this.firstName + " " + this.lastName;
+    } else {
+      return this.firstName + " " + this.middleName + " " + this.lastName;
+    }
   }
 
   public void printData() {
