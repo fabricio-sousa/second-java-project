@@ -12,12 +12,10 @@ class Person {
     this.height = height;
     this.weight = weight;
   }
-  
   // Define the fullName method
   public String fullName() {
     return this.firstName + " " + this.lastName;
   }
-  
   // Define the bmi method
   public double bmi() {
     return this.weight / this.height / this.height;
