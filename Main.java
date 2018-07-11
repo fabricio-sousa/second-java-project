@@ -6,9 +6,10 @@ class Main {
     person2.printData();
     
     System.out.println("----------------------");
-    // Call the getMiddleName method using the person2 instance
-    // and output "The middle name of person2 is ________."
-    System.out.println("The middle name of person2 is " + person2.getMiddleName() + ".");
+    // Set the middleName of person1 to "Claire"
+    person1.setMiddleName("Claire");
     
+    System.out.println("Changed the middle name to " + person1.getMiddleName() + ".");
+    person1.printData();
   }
 }

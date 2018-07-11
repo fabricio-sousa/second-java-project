@@ -20,11 +20,15 @@ class Person {
     this.middleName = middleName;
   }
 
-  // Define the getter for middleName instance field
   public String getMiddleName() {
     return this.middleName;
   }
 
+  // Define the setter for the middleName instance field
+  public void setMiddleName(String middleName) {
+    this.middleName = middleName;
+  }
+  
   public String fullName() {
     if (this.middleName == null) {
       return this.firstName + " " + this.lastName;
