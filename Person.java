@@ -1,10 +1,11 @@
 class Person {
-  public static int count = 0;
-  public String firstName;
-  public String middleName;
-  public String lastName;
-  public int age;
-  public double height, weight;
+  // Change the public fields below to private fields
+  private static int count = 0;
+  private String firstName;
+  private String middleName;
+  private String lastName;
+  private int age;
+  private double height, weight;
 
   Person(String firstName, String lastName, int age, double height, double weight) {
     Person.count++;
@@ -21,7 +22,6 @@ class Person {
   }
 
   public String fullName() {
-     // Use an if statement to only print a middle name if it exists
     if (this.middleName == null) {
       return this.firstName + " " + this.lastName;
     } else {
