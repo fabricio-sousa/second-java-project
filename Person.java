@@ -1,5 +1,4 @@
 class Person {
-  // Change the public fields below to private fields
   private static int count = 0;
   private String firstName;
   private String middleName;
@@ -19,6 +18,11 @@ class Person {
   Person(String firstName, String middleName, String lastName, int age, double height, double weight) {
     this(firstName, lastName, age, height, weight);
     this.middleName = middleName;
+  }
+
+  // Define the getter for middleName instance field
+  public String getMiddleName() {
+    return this.middleName;
   }
 
   public String fullName() {
