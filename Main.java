@@ -1,15 +1,18 @@
 class Main {
   public static void main(String[] args) {
-    Person person1 = new Person("Kate", "Jones", 27, 1.6, 50.0);
+    // Pass "doctor" as the job
+    Person person1 = new Person("Kate", "Jones", 27, 1.6, 50.0, "doctor");
     person1.printData();
-    Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0);
+    // Pass "teacher" as the job
+    Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0, "teacher");
     person2.printData();
-    
     System.out.println("----------------------");
-    // Set the middleName of person1 to "Claire"
-    person1.setMiddleName("Claire");
+    // Change the job of person1 to "veterinarian"
+    person1.setJob("veterinarian");
     
-    System.out.println("Changed the middle name to " + person1.getMiddleName() + ".");
+    // Output "Changed the job of person1 to ________."
+    System.out.println("Changed the job of person1 to " + person1.getJob() + ".");
+    
     person1.printData();
   }
 }

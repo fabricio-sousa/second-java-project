@@ -5,30 +5,47 @@ class Person {
   private String lastName;
   private int age;
   private double height, weight;
-
-  Person(String firstName, String lastName, int age, double height, double weight) {
+  // Declare the job instance field
+  private String job;
+  
+  // Edit the constructor
+  Person(String firstName, String lastName, int age, double height, double weight, String job) {
     Person.count++;
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
     this.height = height;
     this.weight = weight;
+    this.job = job;
   }
   
-  Person(String firstName, String middleName, String lastName, int age, double height, double weight) {
-    this(firstName, lastName, age, height, weight);
+  // Edit the constructor
+  Person(String firstName, String middleName, String lastName, int age, double height, double weight, String job) {
+    this(firstName, lastName, age, height, weight, job);
     this.middleName = middleName;
+    this.job = job;
   }
 
   public String getMiddleName() {
     return this.middleName;
   }
+  
+  // Define the getter for job instance field
+  public String getJob() {
+    return this.job;
+  }
 
-  // Define the setter for the middleName instance field
+
   public void setMiddleName(String middleName) {
     this.middleName = middleName;
   }
   
+  // Define the setter for job instance field
+  public void setJob(String job) {
+    this.job = job;
+  }
+  
+
   public String fullName() {
     if (this.middleName == null) {
       return this.firstName + " " + this.lastName;
@@ -41,6 +58,9 @@ class Person {
     System.out.println("My name is " + this.fullName() + ".");
     System.out.println("I am " + this.age + " years old.");
     System.out.println("My BMI is " + Math.round(this.bmi()) + ".");
+    // Output "I am a ________."
+    System.out.println("I am a " + this.job + ".");
+    
   }
 
   public double bmi() {
@@ -51,5 +71,4 @@ class Person {
     System.out.println("Total: " + Person.count + " people.");
   }
 }
-
 
